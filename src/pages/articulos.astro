@@ -1,0 +1,41 @@
+---
+import Layout from "../layouts/Layout.astro"
+import ArticleCard from "../components/articlecard.astro";
+
+// Para obtener colecciones definidas
+import { getCollection } from 'astro:content';
+
+const posts = await getCollection('blogposts');
+// console.log(posts)
+var post_counter = 0;
+---
+
+<Layout title="Welcome to my page">
+    <main>
+        <section id="posts-title" class="flex flex-col justify-center items-center px-4">
+            <div>
+                <div class="justify-self-center mb-10">
+                    <p 
+                    class="font-extrabold text-3xl text-center sm:inline sm:text-4xl xl:text-5xl"
+                    >Recursos para tu </p><p
+                    class="text-3xl text-tiertiary italic text-center sm:inline sm:text-4xl xl:text-5xl"
+                    > Bienestar</p>
+                </div> 
+            </div>
+            <div class="text-center max-w-170 min-w-75 mb-10">Explora reflexiones, guías y herramientas terapéuticas diseñadas por la Dra. Lilian Oviedo para acompañarte en tu camino de crecimiento personal.</div>
+        </section>
+        <section aria-label="Posts de psicología">
+            <div class="grid justify-center gap-6 md:grid-cols-2 md:w-166 xl:grid-cols-3 xl:w-252">
+                {
+                    posts.map(post => {
+                        post_counter += 1;
+                        return <ArticleCard post={ post } postnum={ post_counter }/>
+                })
+            }
+            </div>
+        </section>
+        <section>
+            <div class="h-50"></div>
+        </section>
+    </main>
+</Layout>

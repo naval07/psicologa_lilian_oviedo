@@ -1,3 +1,8 @@
+---
+import '../styles/global.css' 
+import NavBar from '../components/navbar.astro'
+---
+
 <!doctype html>
 <html lang="en">
 	<head>
@@ -9,15 +14,27 @@
 		<title>Astro Basics</title>
 	</head>
 	<body>
-		<slot />
+		<NavBar />
+		<div>
+			<slot />
+		</div>
 	</body>
 </html>
 
 <style>
-	html,
+	@reference "tailwindcss";
+
+	:root {
+		font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+	}
+
 	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
+		@apply grid place-content-center pt-30;
+		@apply font-sans;
+		@apply bg-[#f2f2f2];
+	}
+
+	body > div {
+		@apply container;
 	}
 </style>

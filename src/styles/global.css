@@ -1,0 +1,14 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --color-primary: #90a07c;
+  --color-secondary: #d4b98c;
+  --color-tiertiary: #d15434;
+}
+
+.cualquiera {
+  min-height: 50vh;
+  height: 80vh;
+  overflow-y: scroll;
+}

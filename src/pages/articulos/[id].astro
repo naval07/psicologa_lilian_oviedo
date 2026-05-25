@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../../layouts/Layout.astro";
+import { render } from "astro:content";
+
+export async function getStaticPaths() {
+
+    const posts = await getCollection("blogposts");
+
+
+    // La funcion map retorna una lista
+    return posts.map((post) => {
+
+        console.log("=====")
+        console.log(post.id)
+        console.log("=====")
+
+        return  { params: { id: post.id },
+            props: { post }
+        }   
+    })
+}
+
+const { post } = Astro.props;
+const { data } = post;
+const { title, author, img, readtime, description, location, updateddate, userlocation } = data;
+
+const { Content } = await render(post); // Contenido del markdown
+---
+
+<Layout title={`${title} - posts`}>
+    <h1>{title}</h1>
+    <img src={`${img}`} alt={title}/>
+    <p>{author}</p><p>{readtime}</p><p>{location}</p><p>{updateddate}</span>
+    <br>
+    <div class="prose">
+        <Content />
+    </div>
+</Layout>

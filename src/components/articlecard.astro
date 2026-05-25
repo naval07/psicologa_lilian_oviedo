@@ -1,0 +1,78 @@
+---
+import { length } from 'astro:schema';
+
+interface Props {
+    post: object;
+    postnum: number;
+}
+
+// TODO: TAGGSS
+const tagsList = ["Tag1", "Tag2", "Tag3", "tag4"]
+
+const { post, postnum } = Astro.props
+const { id, data } = post
+const {
+    title,
+    author,
+    img,
+    readtime,
+    description,
+    location,
+    updateddate,
+    userlocation
+} = data
+
+// Updated date formating
+const strUpdatedDate = new Date(updateddate).toLocaleDateString('es-CO', {year:'numeric', month:'2-digit', day:'2-digit'})
+
+// TODO: Modify or delete this part
+var post_location;
+if (postnum % 2 == 0) {
+    post_location = userlocation.Colombia
+} else {
+    post_location = userlocation.otro
+}
+
+// Tags counter for show only 3
+var tags_counter = 0;
+
+// Determine if post is #1 
+const is_first_post = postnum == 1;
+---
+
+<article class=`"card rounded-3xl overflow-clip shadow-md h-125 w-80 bg-white ${is_first_post ? 'xl:col-span-2 xl:col-start-1 xl:col-end-3 xl:w-166 xl:flex xl:flex-row' : ''}"`>
+    <div class=`"card-img-container h-2/5 w-full ${is_first_post ? 'xl:basis-1/2 xl:h-full xl:w-1/2' : ''}"`>
+        <!-- ${is_first_post ? 'xl:h-full xl:w-1/2' : 'h-2/5 w-full'} -->
+        <img class="h-full w-full object-cover" src={`${img}`} alt={title}/>
+        <!-- ${is_first_post ? 'xl:bg-cover' : ''} -->
+    </div>
+    <div class=`"content-card-container h-3/5 w-full flex flex-col py-3 px-4 ${is_first_post ? 'xl:basis-1/2 xl:h-full xl:w-1/2 xl:px-7 xl:pt-10 !important' : ''}"`>
+        <!-- ${is_first_post ? 'xl:basis-1/2 xl:h-full xl:w-1/2 xl:px-7 xl:pt-10 !important' : ''} -->
+        <div class=`"tags-container flex items-center mb-2 ${is_first_post ? 'xl:mb-7 !important' : ''}"`>
+            { 
+            tagsList.map((tag) => {
+                if (tags_counter < 3) {
+                    tags_counter += 1;
+                    return <span class="text-primary font-bold bg-primary/20 mr-3 p-1 rounded-lg">{tag}</span>
+                }
+            })        
+            }
+        </div>
+        <p class="mb-3 font-bold text-xl !important">{title}</p>
+        <p class=`"description text-sm prose line-clamp-3 ${is_first_post ? 'xl:line-clamp-6 !important' : ''}"` title={`${description}`}>{description}</p>       
+        
+        <div class="grow flex flex-col justify-end">
+            <div class="flex gap-2 pb-3 border-b-2 border-black/10 mb-1">
+                <span class="font-semibold">{author}</span><span class="text-primary">&bull;</span><span>{strUpdatedDate}</span>
+            </div>
+            <div class="flex justify-between items-center pt-1.5">
+                <div>
+                    <span class="text-sm font-light">{readtime} read</span>
+                </div>
+                <a href={`/articulos/${id}`}>
+                    <svg class="size-6 text-primary hover:animate-bounce" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7 7 7-7 7" /></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</article>
