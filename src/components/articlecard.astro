@@ -43,7 +43,7 @@ const is_first_post = postnum == 1;
 <article class=`"card rounded-3xl overflow-clip shadow-md h-125 w-80 bg-white hover:scale-102 duration-100 ${is_first_post ? 'xl:col-span-2 xl:col-start-1 xl:col-end-3 xl:w-166 xl:flex xl:flex-row' : ''} hover:"`>
     <div class=`"card-img-container h-2/5 w-full ${is_first_post ? 'xl:basis-1/2 xl:h-full xl:w-1/2' : ''}"`>
         <!-- ${is_first_post ? 'xl:h-full xl:w-1/2' : 'h-2/5 w-full'} -->
-        <a href={`/articulos/${id}`}>
+        <a href={`/psicologa_lilian_oviedo/articulos/${id}`}>
             <img class="h-full w-full object-cover" src={`${img}`} alt={title}/>
         </a>
         <!-- ${is_first_post ? 'xl:bg-cover' : ''} -->
@@ -60,7 +60,7 @@ const is_first_post = postnum == 1;
             })        
             }
         </div>
-        <a href={`/articulos/${id}`} class="mb-3 font-bold text-xl !important">{title}</a>
+        <a href={`/psicologa_lilian_oviedo/articulos/${id}`} class="mb-3 font-bold text-xl !important">{title}</a>
         <p class=`"description text-sm prose line-clamp-3 ${is_first_post ? 'xl:line-clamp-6 !important' : ''}"` title={`${description}`}>{description}</p>       
         
         <div class="grow flex flex-col justify-end">
@@ -71,7 +71,7 @@ const is_first_post = postnum == 1;
                 <div>
                     <span class="text-sm font-light">{readtime} read</span>
                 </div>
-                <a href={`/articulos/${id}`}>
+                <a href={`/psicologa_lilian_oviedo/articulos/${id}`}>
                     <svg class="size-6 text-primary hover:animate-bounce duration-50" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h14m-7-7 7 7-7 7" /></svg>
                 </a>
             </div>

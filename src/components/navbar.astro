@@ -4,11 +4,11 @@ import logoSm from "../assets/Logo_sm_verde.png";
 
 // Definición de los enlaces
 const navItems = [
-  { name: 'Inicio', href: '/' },
-  { name: 'Sobre mí', href: '/sobre-mi' },
-  { name: 'Mis servicios', href: '/servicios' },
-  { name: 'Artículos', href: '/articulos' },
-  { name: 'Planes', href: '/planes' },
+  { name: 'Inicio', href: '/psicologa_lilian_oviedo' },
+  { name: 'Sobre mí', href: '/psicologa_lilian_oviedo/sobre-mi' },
+  { name: 'Mis servicios', href: '/psicologa_lilian_oviedo/servicios' },
+  { name: 'Artículos', href: '/psicologa_lilian_oviedo/articulos' },
+  { name: 'Planes', href: '/psicologa_lilian_oviedo/planes' },
 ];
 
 
@@ -25,7 +25,7 @@ const isActive = (path: string) =>
   <nav class="px-2 flex items-center justify-between h-full">
     <!-- Logo -->
     <div class="text-xl font-bold text-gray-800 flex basis-1/4 justify-start sm:pl-5 lg:pl-15">
-      <a href="/">
+      <a href="/psicologa_lilian_oviedo">
         <img src={logoFull.src} alt="logo" class="h-20 pt-1 hidden xl:block">
         <img src={logoSm.src} alt="logo" class="h-20 pt-1 block xl:hidden">  
       </a>
@@ -62,7 +62,7 @@ const isActive = (path: string) =>
         class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-bold shadow-md transition-all active:scale-95"
       > -->
       <a
-        href="/planes"
+        href="/psicologa_lilian_oviedo/planes"
         class="text-white bg-primary hover:bg-[#636e55] box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 text-sm px-3 py-2 focus:outline-none rounded-2xl mr-2 min-w-31 md:text-base"
       >
         Empezar ahora
