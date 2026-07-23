@@ -1,4 +1,7 @@
 ---
+import logoFull from "../assets/Logo_full_verde.png";
+import logoSm from "../assets/Logo_sm_verde.png";
+
 // Definición de los enlaces
 const navItems = [
   { name: 'Inicio', href: '/' },
@@ -8,8 +11,8 @@ const navItems = [
   { name: 'Planes', href: '/planes' },
 ];
 
+
 const { pathname } = Astro.url;
-console.log(pathname)
 // Normalización para evitar discrepancias por barras finales (trailing slashes)
 const isActive = (path: string) => 
   pathname === path || pathname === path + '/' || (path !== '/' && pathname.startsWith(path));
@@ -22,8 +25,10 @@ const isActive = (path: string) =>
   <nav class="px-2 flex items-center justify-between h-full">
     <!-- Logo -->
     <div class="text-xl font-bold text-gray-800 flex basis-1/4 justify-start sm:pl-5 lg:pl-15">
-      <img src="src/assets/Logo_full_verde.png" alt="logo" class="h-20 pt-1 hidden xl:block">  
-      <img src="src/assets/Logo_sm_verde.png" alt="logo" class="h-20 pt-1 block xl:hidden">  
+      <img src={logoFull.src} alt="logo" class="h-20 pt-1 hidden xl:block">
+      <img src={logoSm.src} alt="logo" class="h-20 pt-1 block xl:hidden">  
+      <!-- <img src="src/assets/Logo_full_verde.png" alt="logo" class="h-20 pt-1 hidden xl:block"> -->
+      <!-- <img src="src/assets/Logo_sm_verde.png" alt="logo" class="h-20 pt-1 block xl:hidden">   -->
     </div>
 
     <!-- Links de Navegación -->
