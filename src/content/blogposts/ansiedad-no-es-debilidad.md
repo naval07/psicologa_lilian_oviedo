@@ -1,7 +1,7 @@
 ---
 title: "Ansiedad no es debilidad: entendiendo por qué tu cuerpo se activa y cómo volver a la calma"
 author: Deepseek
-img: /assets/ansiedad-no-es-debilidad.png
+img: ansiedad-no-es-debilidad.png
 readtime: 4 min
 description: Descubre qué sucede realmente en tu cerebro y cuerpo durante un episodio de ansiedad, y aprende tres herramientas prácticas basadas en la ciencia para regular tu sistema nervioso sin luchar contra ti mismo.
 location: Bogotá, Colombia.

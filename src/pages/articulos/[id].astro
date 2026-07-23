@@ -37,7 +37,7 @@ const formatedUpdateddate = new Date(updateddate).toLocaleDateString('es-ES', {
 <Layout title={`${title} - posts`}>
     <article class="blog-container flex flex-col justify-center items-center max-w-4xl w-full sm:w-[640px] md:w-[780px] lg:w-full p-5 sm:p-5">
         <section class="cover-container w-full relative h-[450px] rounded-2xl sm:rounded-3xl md:rounded-4xl">
-            <img src={img} alt={title} class="h-full object-cover w-full md:object-cover rounded-2xl sm:rounded-3xl md:rounded-4xl">
+            <img src={`/psicologa_lilian_oviedo/assets/${img}`} alt={title} class="h-full object-cover w-full md:object-cover rounded-2xl sm:rounded-3xl md:rounded-4xl">
 
             <div class="absolute inset-0 flex flex-col justify-end bg-gradient-to-t from-black/80 via-black/20 to-transparent rounded-xl p-5 pr-15 sm:rounded-3xl md:rounded-4xl sm:pl-10 md:pr-40 sm:pb-7">
                 <h1 class="text-3xl md:text-4xl font-bold text-white leading-tight">
@@ -46,7 +46,7 @@ const formatedUpdateddate = new Date(updateddate).toLocaleDateString('es-ES', {
                 <div class="metadata-container flex justify-between text-white mt-5 md:mt-10">
                     <div class="flex flex-row items-center">
                         <div class="w-9 h-9 rounded-full mr-3 bg-secondary p-2">
-                            <img src="/assets/persona.png" alt="icono autor" class="md:object-cover">
+                            <img src="/psicologa_lilian_oviedo/assets/persona.png" alt="icono autor" class="md:object-cover">
                         </div>
                         <div class="autor-container">
                             <p class="font-bold text-md">{author}</p>

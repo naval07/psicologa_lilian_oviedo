@@ -1,7 +1,7 @@
 ---
 title: De la Sobrecarga Mental al Equilibrio Emocional
 author: Gemini
-img: /assets/ansiedad.jpg
+img: ansiedad.jpg
 readtime: 5 min
 description: Descubre qué es realmente la ansiedad, cómo identificar sus señales y qué herramientas profesionales pueden ayudarte a transformar el malestar en calma.
 location: Bogotá, Colombia.

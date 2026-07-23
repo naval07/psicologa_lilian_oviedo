@@ -1,7 +1,7 @@
 ---
 title: "El mito de la autoestima alta: por qué perseguirla te agota y qué construir en su lugar"
 author: Deepseek
-img: /assets/el-mito-de-la-autoestima-alta.png
+img: el-mito-de-la-autoestima-alta.png
 readtime: 5 min
 description: Cambia el foco de “quererte más” a desarrollar una relación compasiva y realista contigo. Te explico cómo la autocompasión puede ser mucho más transformadora —y sostenible— que la autoestima inflada.
 location: Bogotá, Colombia.

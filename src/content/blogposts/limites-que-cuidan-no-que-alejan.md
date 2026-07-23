@@ -1,7 +1,7 @@
 ---
 title: "Límites que cuidan, no que alejan: la guía para decir ‘no’ sin culpa"
 author: Deepsek
-img: /assets/limites-que-cuidan-no-que-alejan.png
+img: limites-que-cuidan-no-que-alejan.png
 readtime: 5 min
 description: Aprende a identificar cuándo estás cediendo por miedo al rechazo y cómo establecer límites claros que protejan tu bienestar emocional, sin convertirte en alguien distante o frío.
 location: Bogotá, Colombia.

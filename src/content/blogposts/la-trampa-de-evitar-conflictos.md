@@ -1,7 +1,7 @@
 ---
 title: "La trampa de evitar conflictos: por qué no pelear puede destruir tu relación de pareja"
 author: Deepseek
-img: /assets/la-trampa-de-evitar-conflictos.png
+img: la-trampa-de-evitar-conflictos.png
 readtime: 5 min
 description: "Descubre por qué huir de las discusiones no protege tu relación, sino que la enferma en silencio. Aprende a transformar el conflicto en conexión y conoce el papel de la terapia de pareja."
 location: Bogotá, Colombia.
