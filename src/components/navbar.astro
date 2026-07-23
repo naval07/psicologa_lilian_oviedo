@@ -14,8 +14,7 @@ const navItems = [
 
 const { pathname } = Astro.url;
 // Normalización para evitar discrepancias por barras finales (trailing slashes)
-const isActive = (path: string) => 
-  pathname === path || pathname === path + '/' || (path !== '/' && pathname.startsWith(path));
+const isActive = (path: string) => pathname === path || pathname === path + '/' || (path !== navItems[0].href && pathname.startsWith(path));
 
 
 ---
