@@ -20,11 +20,11 @@ const isActive = (path: string) =>
 
 ---
 
-<header class="bg-white fixed w-full h-[70px] z-20 top-0 start-0 shadow-md">
+<header class="bg-white fixed w-full h-[70px] z-20 top-0 start-0 shadow-md min-w-[240px]">
   <!-- <nav class="2xl:max-w-full md:max-w-7xl px-15 flex items-center justify-between"> -->
-  <nav class="px-2 flex items-center justify-between h-full">
+  <nav class="px-2 flex items-center md:justify-between h-full">
     <!-- Logo -->
-    <div class="text-xl font-bold text-gray-800 flex basis-1/4 justify-start sm:pl-5 lg:pl-15">
+    <div class="logo-container text-xl font-bold text-gray-800 flex basis-1/2 justify-start min-w-[60px] md:basis-1/4 lg:justify-end sm:pl-5 lg:pl-15">
       <a href="/psicologa_lilian_oviedo">
         <img src={logoFull.src} alt="logo" class="h-20 pt-1 hidden xl:block">
         <img src={logoSm.src} alt="logo" class="h-20 pt-1 block xl:hidden">  
@@ -34,7 +34,7 @@ const isActive = (path: string) =>
     </div>
 
     <!-- Links de Navegación -->
-    <nav class="hidden flex-none basis-1/2 min-w-96 md:block">
+    <nav class="links-container hidden flex-none md:basis-1/2 min-w-96 md:block">
       <ul class="flex space-x-5 lg:space-x-8 items-center justify-center">
         {
         navItems.map((item) => (
@@ -56,14 +56,14 @@ const isActive = (path: string) =>
     </nav>
 
     <!-- Botón Call to Action (CTA) -->
-    <div class="flex basis-1/4 justify-end lg:pr-15">
+    <div class="cta-container flex basis-1/2 items-center justify-end md:basis-1/4 md:justify-end lg:justify-start">
       <!-- <a
         href="/contacto"
         class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2.5 rounded-lg font-bold shadow-md transition-all active:scale-95"
       > -->
       <a
         href="/psicologa_lilian_oviedo/planes"
-        class="text-white bg-primary hover:bg-[#636e55] box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium leading-5 text-sm px-3 py-2 focus:outline-none rounded-2xl mr-2 min-w-31 md:text-base"
+        class="text-white bg-primary hover:bg-[#636e55] box-border border border-transparent focus:ring-4 focus:ring-brand-medium shadow-xs font-medium text-sm px-1 h-10 focus:outline-none rounded-2xl mr-2 min-w-31 flex items-center justify-center sm:px-2"
       >
         Empezar ahora
       </a>
@@ -82,7 +82,7 @@ const isActive = (path: string) =>
       </button> -->
     </div>
   </nav>
-  <div id="mobile-menu" class="hidden md:hidden">
+  <div id="mobile-menu" class="hidden md:hidden bg-white">
     <div class="space-y-1 px-2 pt-2 pb-3">
       <!-- Current: "bg-gray-950/50 text-white", Default: "text-gray-300 hover:bg-white/5 hover:text-white" -->
       {
